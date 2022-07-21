@@ -35,11 +35,13 @@ import (
 )
 
 // ExtractFile(...interface{}) -- Extracts file from a base64 TGZ archive in a string.
-// Input: archivePtr  *string		-- MANDATORY
+// Input: 
+//        archivePtr  *string		-- MANDATORY
 //        archiveName  string       -- MANDATORY
 //        filePath     string		-- MANDATORY
 //        logName      string		-- OPTIONAL
-// Output: []byte		-- File data
+// Output: 
+//         []byte		-- File data
 //         err			-- Present only if error is encountered
 func ExtractFile(vArgs ...interface{}) ([]byte, error) {
 	archivePtr, archiveName, filePath, logName, err := extractFileParams(vArgs...)
@@ -75,8 +77,10 @@ func ExtractFile(vArgs ...interface{}) ([]byte, error) {
 }
 
 // extractFileParams(...interface{}) -- Unload variadic args for ExtractFile
-// Input: vArgs ...interface{} -- variadic inputs
-// Output: archivePtr *string		-- untouched
+// Input: 
+//         vArgs ...interface{} -- variadic inputs
+// Output: 
+//         archivePtr *string		-- untouched
 //         archiveName string		-- untouched
 //         filePath    string		-- untouched
 //         logname     string		-- untouched if set, default = [go-selftgz]
