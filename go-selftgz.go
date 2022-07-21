@@ -91,7 +91,7 @@ func extractFileParams(vArgs ...interface{}) (archivePtr *string, archiveName st
 
 	// Verify enough parameters
 	if 2 > len(vArgs) {
-		err = errors.New("Not enough parameters.")
+		err = errors.New("not enough parameters.")
 		return
 	}
 
