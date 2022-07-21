@@ -126,7 +126,7 @@ func extractFileParams(vArgs ...interface{}) (archivePtr *string, archiveName st
 			}
 			logName = param
 		default:
-			err = errors.New("Wrong parameter count (too many?)")
+			err = errors.New("wrong parameter count (too many?)")
 			return
 		}
 	}
